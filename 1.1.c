@@ -14,7 +14,7 @@ int main()
 	    if (d != c)
 	    {
 			printf("%c", d);
-        }
+            }
 	}
 	printf("\n");
 	return 0;
