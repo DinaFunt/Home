@@ -1,8 +1,8 @@
 #include "LIST.h"
 
-Node* CreateNode(int val)
+Node *CreateNode(int val)
 {
-    Node* newNode = (Node *)calloc(1, sizeof(Node));
+    Node *newNode = (Node *)calloc(1, sizeof(Node));
 
     if (newNode == NULL)
     {
