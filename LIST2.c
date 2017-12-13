@@ -114,7 +114,7 @@ void CleanList(LinkedList *list) {
     Node *tmp = list->head;
     Node *tmp2;
 
-    while(tmp)
+    while (tmp)
     {
         tmp2 = tmp->next;
         free(tmp);
@@ -173,7 +173,7 @@ void orderChange(LinkedList *list) {
     ptr1->next = NULL;
     ptr2->next = ptr1;
 
-    while(ptr3)
+    while (ptr3)
     {
         ptr1 = ptr2;
         ptr2 = ptr3;
