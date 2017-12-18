@@ -1,4 +1,5 @@
-#include "LIST.h"
+#include "list.h"
+
 
 typedef void (*Action)(LinkedList *);
 
