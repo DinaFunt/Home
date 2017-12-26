@@ -227,15 +227,7 @@ void circleCheck(LinkedList *list) {
     if ((list->head)->next != NULL)
     {
         ptr1 = list->head;
-        if ((ptr1)->next != NULL)
-        {
-            ptr2 = ptr1->next;
-        }
-        else
-        {
-            printf("no round\n");
-            return;
-        }
+        ptr2 = ptr1->next;
     }
     else
     {
