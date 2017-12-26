@@ -1,0 +1,15 @@
+#include <stdio.h>
+union {
+	int x;
+	char mas[sizeof(int)];
+} unin;
+int main(void) {
+    unin.x = 1;
+    if (unin.mas[0] == 1) {
+        printf("Little-endian\n")
+        }
+	else {
+        printf("Big-endian\n")
+    }
+    return 0;
+}
