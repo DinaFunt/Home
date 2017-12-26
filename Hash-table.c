@@ -53,6 +53,11 @@ hsh_entry *find_add(unsigned char name[])
         }
     }
     entry = (hsh_entry *)malloc(sizeof(hsh_entry));
+    if (entry == NULL)
+    {
+        printf("Error. Can't allocate memory\n");
+        exit(0);
+    }
     entry->value = 1;
     entry->next = HashTab[h];
     l = strlen((char *)name);
