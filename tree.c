@@ -187,7 +187,8 @@ int **dynamic_array_alloc(int N, int M)
 void dynamic_array_free(int **A, int N)
 {
     int i;
-    for(i = 0; i < N; i++) {
+    for(i = 0; i < N; i++)
+    {
         free(A[i]);
     }
     free(A);
