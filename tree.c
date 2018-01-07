@@ -252,10 +252,3 @@ int main() {
     close(f);
     return 0;
 }
-
-
-
-
-
-
-
