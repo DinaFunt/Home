@@ -3,8 +3,7 @@
 #include <stdlib.h>
 
 #define UpperBound 360
-
-enum { COEFF = 31 };
+#define COEFF 31
 
 typedef struct hsh_entry hsh_entry;
 
