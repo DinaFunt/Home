@@ -101,7 +101,7 @@ Node* CreateNode(int val)
     if (newNode == NULL)
     {
         printf("Can't callocate memory");
-        exit(0);
+        exit(1);
     }
 
     newNode->num = val;
@@ -199,14 +199,14 @@ int main() {
     if (f == NULL)
     {
         printf("cannot open your file\n");
-        exit(0);
+        exit(1);
     }
 
     FILE *out = fopen("doc.gv", "w");
     if (out == NULL)
     {
         printf("cannot open your file\n");
-        exit(0);
+        exit(1);
     }
 
     int n = 0, i;
@@ -216,7 +216,7 @@ int main() {
     if ((k == NULL) || (p == NULL))
     {
         printf("Cannot allocate memory\n");
-        exit(0);
+        exit(1);
     }
     int **e = dynamic_array_alloc(n, n); // cost of subtrees
     int **w = dynamic_array_alloc(n, n); //sum of probabilities of this combination
@@ -226,7 +226,7 @@ int main() {
     if (tree == NULL)
     {
         printf("Cannot allocate memory\n");
-        exit(0);
+        exit(1);
     }
 
     for (i = 0; i < n; i++)
