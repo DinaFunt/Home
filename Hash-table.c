@@ -70,7 +70,7 @@ void clear_hash(void) {
     int i;
     hsh_entry *entry, *entry_intr;
 
-    for (i = 1; i < UpperBound; i++)
+    for (i = 0; i < UpperBound; i++)
     {
         entry = HashTab[i];
         while (entry != NULL)
