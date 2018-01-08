@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <time.h>
 
 #define UpperBound 360
 #define COEFF 31
@@ -146,7 +147,7 @@ void get_stat(void) {
     MaxValue = 0;
     MaxChain = 0;
     Words = 0;
-    for (i = 1; i < UpperBound; i++)
+    for (i = 0; i < UpperBound; i++)
     {
         stat_arr[i] = 0;
         entry = HashTab[i];
@@ -171,6 +172,8 @@ void get_stat(void) {
 
 int main() {
     int i;
+    clock_t tm;
+    tm = clock();
 
     for (i = 0; i < UpperBound; i++)
     {
@@ -179,5 +182,7 @@ int main() {
     book_processing();
     get_stat();
     clear_hash();
+    tm = clock() - tm;
+    printf("%f\n",(double) tm / CLOCKS_PER_SEC);
     return 0;
 }
