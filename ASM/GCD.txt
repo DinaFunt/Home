@@ -1,0 +1,40 @@
+;1) load two numbers into 0 and 1 cells of memory. Num_0 > Num_1
+;2) subtract one from the other
+;3) load result into 2
+;4) compare number from first cell and from second cell
+;5a) they're equals -> it's the end of programm
+;5b) else load the numbers into cells so that the larger of them is in the zero
+;6) repeat until we get item 5a
+
+ldc 238
+st 0
+ldc 102
+st 1
+
+
+cycle: ld 1
+ld 0
+sub
+st 2
+ld 1
+cmp
+
+br check1
+ld 1
+ret
+
+
+check1: ldc 1
+add
+
+br check2
+ld 2
+st 0
+jmp cycle
+
+
+check2: ld 1
+st 0
+ld 2
+st 1
+jmp cycle
